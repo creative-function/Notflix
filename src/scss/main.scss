@@ -16,6 +16,8 @@ TABLE OF CONTENTS:
 /* 0. Reset ================================= */
 @import 'reset';
 
+$stevenFont : 'Sniglet', cursive;
+
 
 /* 1. Main Layout ================================= */
 
@@ -24,7 +26,25 @@ TABLE OF CONTENTS:
 }
 
 body{
-	background-color:#f9b235;
+	background-color: #e577aa;
+}
+
+.gems-bkgrnd{
+	background-image: url("/dist/img/starlight.jpg");
+	background-size:cover;
+	
+}
+
+.product-section{
+	position: relative;
+}
+.product-bkrnd{
+	background-image: url("/dist/img/pinkFields.png");
+	background-size:contain;
+	width:100%;
+	height: 100%;
+	opacity: .5;
+	position: absolute;
 }
 
 .cn-header{
@@ -38,96 +58,185 @@ body{
 }
 
 .logo-container{
-	overflow: hidden;
 	width:100%;
+	height: auto;
+	position: relative;
+	
+	img.showLogo{
+		width:35%;
+		
+		&:hover{
+			animation: spin-ray .3s linear;
+			transform: rotate(0deg);
+		}
+	}
+	
+	.show-description{
+	   max-width:40%;
+	   margin:2%;
+	   padding:2%;
+	   left:35%;
+	   top:10px;
+	   position: absolute;
+	   font-family: $stevenFont;
+	   font-size: 1.2em;
+	   background-color: #e577aa;	  
+    }
 }
 
-.banner-ad{
-    
-    width:500px;
-    height: 100px;
-	background-image: url("/dist/img/ad_cnNetwork.jpeg");
-	float:right;
-    // position: relative;
-    // right:-59%;
-   
+
+.crystal-gems-popouts{
+	position: fixed;
+	left:100%;
+	top: 0;
+	z-index: 10000;
+	width: 100vw;
+	height: 100vh;
+	background-color: red;
+	transition: 1s;
+
+	.tab{
+		width: 100px;
+		height: 100px;
+		// background-color: #0968a1;
+
+		.gem{
+			width:100%;
+		}
+	}
+	
+	.popout-styling{
+		position: absolute;
+		top: 25%;
+		width:950px;
+		height:auto;
+		cursor: pointer;
+		transform: translateX(100px);
+
+		&:nth-child(1) {
+			transform: translateX(100px) translateY(-170px);
+		}
+		&:nth-child(2) {
+			transform: translateX(100px) translateY(-50px);
+		}
+		&:nth-child(3) {
+			transform: translateX(100px) translateY(70px);
+		}
+		&:nth-child(4) {
+			transform: translateX(100px) translateY(190px);
+		}
+
+		h1.name{
+			width:45%;
+			text-align: center;
+			font-family: $stevenFont;
+			font-size: 4em;
+		}
+	
+		.tab{
+			position: absolute;
+			left:-100px;
+		}
+		.blurb{
+			float: right;
+			width:50%;
+			margin:10px;
+			padding: 10px 100px 10px 10px;
+			font-size: 1.2em;
+			line-height: 1.3em;
+			font-family: $stevenFont;
+
+		}
+		img.headshot{
+			width:45%;
+		}
+		h1{
+			font-size: 2em;
+		}
+	}
+	.garnet-info{
+		background-color: #af4646;
+	}
+
+	.pearl-info{
+		background-color: #7fb0ce;
+	}
+
+	.steven-info{
+		background-color: #ffdf2c;
+	}
+
+	.ame-info{
+		background-color: #a581b9;
+	}
 }
 
 
 
-.caption{
-    position: relative;
-    color: #0968a1;
-    top: 100%;
+.crystal-gems{
+	position: relative;
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-start;
+	align-items: flex-end;
+	
+	
+	
+	.stevenIMG{
+		width:50%;
+		cursor:pointer;
+
+		img.itsSteven{
+			width:100%
+			
+		}
+	}
+
+	.ameIMG{
+		width:50%;
+		cursor:pointer;
+
+		img.Amethyst{
+			width:100%;
+	
+		}
+	}
+
+	.pearlIMG{
+		width:50%;
+		cursor:pointer;
+		img.Pearl{
+			width:150%;
+		}
+	}
+
+	.garnetIMG{
+		width:50%;
+		cursor:pointer;
+		img.Garnet{
+			width:100%;
+		}
+	}
+
+
 }
 
-.background{
+.merch-background{
 	width:100%;
-	height:300px;
+	height:250px;
 	background-image: url("../img/cookieCat.png");
     
     .merch{
         position: relative;
-        top:40%;
+		top:40%;
+		font-family: $stevenFont;
         text-align: center;
-        font-size: 2em;
-        color:white;
+        font-size: 4em;
+		color:white;
+		background-color: #e577aa;
     }
 }
 
-.stevenTitle{
-	width:25%;
-}
-
-.crystal-gems{
-    display: flex;
-    flex-flow: row;
-    justify-content: flex-start;
-    align-items: flex-end;
-    
-
-    .stevenBox{
-        width:50%;
-    }
-    img.itsSteven{
-        width:100%
-        
-    }
-
-    .ameBox{
-        width:50%;
-    }
-    img.Amethyst{
-        width:100%;
-
-        :hover{
-            .video-player{
-                transform: translateX(-50%);
-            }
-        }
-    }
-
-    .pearlBox{
-        width:50%;
-       
-    }
-    img.Pearl{
-        width:150%;
-    }
-
-    .garnetBox{
-        width:50%;
-    }
-    img.Garnet{
-        width:100%;
-    }
-
-    .show-description{
-        width:50%;
-        position: absolute; 
-        left:50%;
-    }
-}
 
 .ads{
 
@@ -136,28 +245,135 @@ body{
 
 	.banner-ad {
 		position: relative;
+		cursor: pointer;
 
 		.ad-overlay{
 			position: absolute;
 			width:100%;
 			height: 100%;
-			background-color: rgba(0,255,255,0.45);
+			// background-color: rgba(0,255,255,0.5);
+
+
+			p{
+				display:none
+			}
+
+
+			&:hover{
+
+				background-color: rgba(0,255,255,0.5);
+
+				p{
+					display: block;
+					font-family: helvetica;
+					font-weight: bold;
+					font-size: 1.8em;
+					position: absolute;
+					top:50%;
+					left:50%;
+					transform: translate(-50%,-50%);
+				}
+			}
+
+
 		}
 	}
-	.banner-two{
+
+	.banner-one{
+    
 		width:300px;
-		height:0;
-		padding:0 0 14% 0;
+		height: 250px;
 		background-image: url("/dist/img/ad_floral.jpg");
+		position: absolute;
+		left:0%; 
+		animation: flashing 5s linear infinite;
+	}
+
+	.banner-two{
+		width:728px;
+		height:90px;
+		// height:0;
+		// padding:0 0 14% 0;
+		background-image: url("/dist/img/ad_cnNetwork.jpeg");
+		animation: rocking 3s linear infinite;
+		
 	}
 
 	.banner-three{
-		width:100%;
+		width:160px;
+		height:600px;
+		position: absolute;
+		right:0;
 		background-image: url("/dist/img/ad_food.jpg");
+		animation: sliding 3s ease infinite;
+
 		
 	}
 }
 
+//====KEYFRAMES=====
+@keyframes spin-ray {
+
+
+	0%{
+		
+		transform: rotate(0deg);
+	}
+
+   100%{
+	   
+		transform: rotate(-360deg);
+	}
+}
+
+@keyframes flashing{
+
+	0%{
+		transform: scale(.7);
+	}
+
+	50%{
+		transform: scale(1);
+	}
+
+	100%{
+		transform: scale(.7);
+	}
+}
+
+@keyframes rocking{
+
+	0%{
+		transform: translateX(15px) translateY(15px);
+	}
+
+	50%{
+		transform: translateX(-15px) translateY (-15px);
+	}
+
+	80%{
+		transform: translateX(-25px) translateY(-25px);
+
+	}
+
+	100%{
+		transform: translateX(15px) translateY(15px);
+	}
+}
+
+@keyframes sliding{
+	0%{
+		transform: translateY(25px);
+	}
+
+	50%{
+		transform: translateY(-25px);
+	}
+
+	100%{
+		transform: translateY(25px);
+	}
+}
 
 // ====GALLERY======
 
@@ -279,6 +495,7 @@ body{
 .cbp-pgcontent {
 	border: 3px solid #47a3da;
 	position: relative;
+	background-color: #ffffff;
 }
 
 .cbp-pgrotate {
@@ -689,3 +906,4 @@ body{
 		width: 100%;
 	}
 }
+
