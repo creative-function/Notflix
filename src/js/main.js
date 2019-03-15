@@ -158,7 +158,7 @@ window.onload = function(){
         .from(pearlButton,1,{
             opacity:0
         })
-        .from(stevenButton,1,{scale:.5})
+        .from(stevenButton,.25,{scale:.5})
         .from(ameButton,1,{x:100})
         .from(showLogo,1,{y:-100})
         .from(showDescription,1,{opacity:0,y:-100});

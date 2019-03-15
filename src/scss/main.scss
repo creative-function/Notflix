@@ -39,8 +39,8 @@ body{
 	position: relative;
 }
 .product-bkrnd{
-	background-image: url("/dist/img/pinkFields.png");
-	background-size:contain;
+	background-image: url("/dist/img/starlight.jpg");
+	background-size:cover;
 	width:100%;
 	height: 100%;
 	opacity: .5;
@@ -180,6 +180,14 @@ body{
 	justify-content: flex-start;
 	align-items: flex-end;
 	
+	.intro-song{
+		position: absolute;
+		top:-10%;
+		left:45%;
+		
+		
+		
+	}
 	
 	
 	.stevenIMG{
