@@ -16,6 +16,7 @@ TABLE OF CONTENTS:
 /* 0. Reset ================================= */
 @import 'reset';
 
+
 $stevenFont : 'Sniglet', cursive;
 
 
@@ -30,7 +31,7 @@ body{
 }
 
 .gems-bkgrnd{
-	background-image: url("/dist/img/starlight.jpg");
+	background-image: url("/dist/img/starlightHalf@0.5x.png");
 	background-size:cover;
 	
 }
@@ -39,7 +40,7 @@ body{
 	position: relative;
 }
 .product-bkrnd{
-	background-image: url("/dist/img/starlight.jpg");
+	background-image: url("/dist/img/starlightHalf@0.5x.png");
 	background-size:cover;
 	width:100%;
 	height: 100%;
@@ -74,14 +75,24 @@ body{
 	.show-description{
 	   max-width:40%;
 	   margin:2%;
+	   margin-bottom:10px;
 	   padding:2%;
-	   left:35%;
+	   left:45%;
 	   top:10px;
 	   position: absolute;
-	   font-family: $stevenFont;
-	   font-size: 1.2em;
-	   background-color: #e577aa;	  
-    }
+
+	   background-color: #e577aa;
+	   
+	   .show-description-text{
+			margin-bottom:10px;
+			font-family: $stevenFont;
+			font-size: 1em;
+	   }
+	   
+	  	
+	}
+	
+    
 }
 
 
@@ -180,15 +191,7 @@ body{
 	justify-content: flex-start;
 	align-items: flex-end;
 	
-	.intro-song{
-		position: absolute;
-		top:-10%;
-		left:45%;
-		
-		
-		
-	}
-	
+
 	
 	.stevenIMG{
 		width:50%;
@@ -436,10 +439,10 @@ body{
 //         transform: rotateY(360deg);
 //     }
 // }
+/* ====SLIDESHOW====== */
 
 // PRODUCT PAGE
 
-/* ====SLIDESHOW====== */
 
 @font-face {
 	font-family: 'pgicons';
@@ -872,6 +875,11 @@ body{
 
 .cbp-pginfo {
 	padding-top: 10px;
+	background-color:hotpink;
+
+	h3{
+		font-family: $stevenFont;
+	}
 }
 
 .cbp-pginfo:before,
@@ -915,3 +923,52 @@ body{
 	}
 }
 
+
+@media screen and(max-width:1059px){
+	.crystal-gems-popouts{
+		display:none;
+	}
+	
+	.logo-container{
+		width:100%;
+		height: auto;
+		position: relative;
+		
+		img.showLogo{
+			width:35%;
+			
+			&:hover{
+				animation: spin-ray .3s linear;
+				transform: rotate(0deg);
+			}
+		}
+		
+		.show-description{
+		   max-width:75%;
+		   margin:2%;
+		   margin-bottom:10px;
+		   padding:2%;
+		   left:15%;
+		   top:10px;
+		   position: relative;
+		   background-color: #e577aa;
+		   
+		   
+		   .show-description-text{
+				margin-bottom:10px;
+				font-family: $stevenFont;
+				font-size: 1em;
+		   }
+		   
+		
+		}
+		
+		
+	}
+
+	.merch-background{
+		margin-bottom:8%;
+
+	}
+
+}
