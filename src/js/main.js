@@ -154,12 +154,12 @@ window.onload = function(){
     console.log("gems have loaded");
 
 
-    tl.from(garnetButton, 1,{x:-100})
-        .from(pearlButton,1,{
-            opacity:0
-        })
-        .from(stevenButton,.25,{scale:.5})
-        .from(ameButton,1,{x:100})
-        .from(showLogo,1,{y:-100})
-        .from(showDescription,1,{opacity:0,y:-100});
+    tl.from(showLogo,1,{y:-100})
+        .from(showDescription,1,{opacity:0,y:-100})
+        .from(garnetButton,3,{y:250, opacity:0})
+        .from(pearlButton,1,{ opacity:0 })
+        .from(ameButton,1,{x:100, opacity:0})
+        .from(stevenButton,.25,{scale:.5, opacity:0});
+        
 }
+

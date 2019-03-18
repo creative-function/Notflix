@@ -249,6 +249,7 @@ body{
 }
 
 
+
 .ads{
 
 	display: flex;
@@ -297,6 +298,7 @@ body{
 		background-image: url("/dist/img/ad_floral.jpg");
 		position: absolute;
 		left:0%; 
+		top:550px;
 		animation: flashing 5s linear infinite;
 	}
 
@@ -306,21 +308,23 @@ body{
 		// height:0;
 		// padding:0 0 14% 0;
 		background-image: url("/dist/img/ad_cnNetwork.jpeg");
-		animation: rocking 3s linear infinite;
+		animation: animatedBackground 45s linear infinite;
 		
 	}
 
 	.banner-three{
 		width:160px;
 		height:600px;
-		position: absolute;
+		position: relative;
 		right:0;
+		top:150px;
 		background-image: url("/dist/img/ad_food.jpg");
 		animation: sliding 3s ease infinite;
 
 		
 	}
 }
+
 
 //====KEYFRAMES=====
 @keyframes spin-ray {
@@ -352,23 +356,18 @@ body{
 	}
 }
 
-@keyframes rocking{
+@keyframes animatedBackground{
 
 	0%{
-		transform: translateX(15px) translateY(15px);
+		background-position: 0px 0px;
 	}
 
 	50%{
-		transform: translateX(-15px) translateY (-15px);
-	}
-
-	80%{
-		transform: translateX(-25px) translateY(-25px);
-
+		background-position: 0px 45%;
 	}
 
 	100%{
-		transform: translateX(15px) translateY(15px);
+		background-position: 50% 0px;
 	}
 }
 
@@ -458,7 +457,8 @@ body{
 .cbp-pgcontainer {
 	position: relative;
 	width: 100%;
-	padding: 0 30px 100px 30px;
+	padding: 0 2% 100px 2%;
+	
 }
 
 .cbp-pgcontainer ul,
@@ -493,7 +493,7 @@ body{
 	vertical-align: top;
 	position: relative;
 	width: 33%;
-	min-width: 340px;
+	min-width: 300px;
 	max-width: 555px;
 	padding: 20px 2% 50px 2%;
 	text-align: left;
@@ -506,7 +506,7 @@ body{
 .cbp-pgcontent {
 	border: 3px solid #47a3da;
 	position: relative;
-	background-color: #ffffff;
+	background-color: #f3d7ee;
 }
 
 .cbp-pgrotate {
@@ -717,7 +717,7 @@ body{
 }
 
 .cbp-pgrotate:before {
-	background-image: url("dist/img/waffle.png");
+	content: "\e004";
 }
 
 /* Tooltips */
@@ -875,11 +875,9 @@ body{
 
 .cbp-pginfo {
 	padding-top: 10px;
-	background-color:hotpink;
-
-	h3{
-		font-family: $stevenFont;
-	}
+	background-color: #e577aa;
+	font-family: $stevenFont;
+	
 }
 
 .cbp-pginfo:before,
@@ -896,7 +894,7 @@ body{
 .cbp-pginfo span {
 	float: left;
 	width: 50%;
-	font-size: 1.8em;
+	font-size: 1.7em;
 	padding: 10px 5px;
 	margin: 0;
 }

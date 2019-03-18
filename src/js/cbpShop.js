@@ -8,6 +8,13 @@
  * Copyright 2013, Codrops
  * http://www.codrops.com
  */
+
+ console.log ("product gallery JS is live");
+
+let d = dog;
+
+console.log(d);
+
 ;( function( window ) {
 	
 	'use strict';
